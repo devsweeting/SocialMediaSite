@@ -4,7 +4,7 @@ import NewsHeader from "./NewsHeader";
 
 function News(props) {
   var myStyledComponentStyles = {
-    border: '1px lightblue solid',
+    border: '2px lightgrey solid',
     fontFamily: 'arial',
   }
   var postStyle = {

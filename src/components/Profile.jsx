@@ -1,11 +1,8 @@
 import React from "react";
 
-
-
-
 function Profile(props) {
   var myStyledComponentStyles = {
-    border: '1px lightblue solid',
+    border: '2px lightgrey solid',
   }
   var profileTopDiv = {
     padding: '30px',

@@ -2,7 +2,7 @@ import React from "react";
 
 function Other(props) {
   var myStyledComponentStyles = {
-    border: '1px lightblue solid',
+    border: '2px lightgrey solid',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',

@@ -5,7 +5,7 @@ import React from "react";
 
 function Friends(props) {
   var myStyledComponentStyles = {
-    border: '1px lightblue solid',
+    border: '2px lightgrey solid',
   }
 
   return (
