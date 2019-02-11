@@ -12,7 +12,7 @@ function App(props) {
     display: 'grid',
     gridGap: '1em',
     gridTemplateColumns: '1fr 1fr 1fr',
-
+    fontFamily: 'arial'
   }
   var headerStyle = {
     gridColumn: '1 / 4',

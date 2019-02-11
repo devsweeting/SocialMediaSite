@@ -1,18 +1,29 @@
 import React from "react";
-
-
-
+import NewsItem from "./NewsItem";
+import NewsHeader from "./NewsHeader";
 
 function News(props) {
   var myStyledComponentStyles = {
     border: '1px lightblue solid',
+    fontFamily: 'arial',
   }
+  var postStyle = {
+    border: '1px grey solid',
+    backgroundColor: 'red',
+  }
+  var itemStyle = {
+    backgroundColor: 'grey',
+  }
+
 
   return (
     <div style={myStyledComponentStyles}>
-      <h2>News</h2>
-        <h2>News</h2>
-          <h2>News</h2>
+
+    <NewsHeader/>
+
+    <NewsItem/>
+
+    <NewsItem/>
 
     </div>
 

@@ -7,10 +7,9 @@ function Other(props) {
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: '5px',
-    borderRadius: '10px'
+    borderRadius: '10px',
   }
   var styleButtons = {
-
   }
   var styleTweet = {
 
