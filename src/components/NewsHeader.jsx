@@ -3,7 +3,7 @@ import React from "react";
 
 
 
-function NewsHeader(props) {
+function NewsHeader({image}) {
   var myStyledComponentStyles = {
 
   }
@@ -16,8 +16,12 @@ function NewsHeader(props) {
     alignItems: 'center',
     padding: '15px',
   }
-  var imgStyle = {
-    borderRadius: "10px",
+  var userBlockStyle = {
+    borderRadius: "3px",
+    height:'40px',
+    width: '40px',
+    marginRight: '15px',
+    backgroundColor: 'darkred'
   }
   var inputBoxStyle = {
 
@@ -26,8 +30,7 @@ function NewsHeader(props) {
   return (
     <div style={myStyledComponentStyles}>
       <div style={inputStyle}>
-        <div style={imgStyle}>
-          <img src="https://leftonsgroup.com/wp-content/uploads/2018/03/SMALL-RED-SQUARE.jpg" style={{height:'40px', paddingRight: '15px'}}></img>
+        <div style={userBlockStyle}>
         </div>
         <div style={inputBoxStyle}>
           <input placeholder="What's Happening?" />

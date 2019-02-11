@@ -3,9 +3,9 @@ import React from "react";
 
 
 
-function NewsItem({image}) {
+function FriendSuggestion({image}) {
   var myStyledComponentStyles = {
-    border: '1px lightgrey solid',
+
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -20,27 +20,29 @@ function NewsItem({image}) {
     width: '40px'
   }
   var itemImage = {
-    padding: '10px',
 
   }
-  var itemContent = {
-    padding: '10px',
+  var buttonStyle = {
+    alignItem: "center",
+    marginTop: '20px',
+    padding: '5px',
   }
+
 
   return (
     <div style={myStyledComponentStyles}>
       <div style={itemImage}>
         <img style={imgStyle} src={image}></img>
       </div>
-      <hr/>
-      <div style={itemContent}>
-        <p><em>Title</em></p>
-          <hr/>
-          <p>ContentContentContent</p>
+      <div>
+        <h4>Friend</h4>
+      </div>
+      <div>
+        <button style={buttonStyle}> Follow+ </button>
       </div>
     </div>
 
   );
 }
 
-export default NewsItem;
+export default FriendSuggestion;

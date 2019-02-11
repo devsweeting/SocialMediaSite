@@ -12,14 +12,14 @@ function App(props) {
     display: 'grid',
     gridGap: '1em',
     gridTemplateColumns: '1fr 1fr 1fr',
-    fontFamily: 'arial'
+    fontFamily: 'arial',
   }
   var headerStyle = {
     gridColumn: '1 / 4',
     gridRow: '1',
   }
   var profileStyle = {
-    gridColumn: '1 / 2',
+    gridColumn: '1',
     gridRow: '2',
   }
   var bioStyle = {
@@ -28,11 +28,11 @@ function App(props) {
   }
   var newsStyle = {
     gridColumn: '2',
-    gridRow: '2 / 5',
+    gridRow: '2 / 4',
   }
   var friendsStyle = {
     gridColumn: '3',
-    gridRow: '2',
+    gridRow: '2 / 4',
   }
 
   return (
