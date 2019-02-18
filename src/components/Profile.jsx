@@ -16,7 +16,8 @@ function Profile(props) {
     marginLeft: '30px',
     marginRight: '10px',
     float: 'left',
-    backgroundColor: 'lightblue'
+    backgroundColor: 'lightblue',
+    maxWidth:'80px'
   }
   var nameStyle = {
     paddingBottom: '10px',
@@ -32,7 +33,7 @@ function Profile(props) {
   return (
     <div style={myStyledComponentStyles}>
       <div>
-        <img style={imgStyle} src="http://files.softicons.com/download/business-icons/flatastic-icons-part-4-by-custom-icon-design/png/72x72/user-blue.png"></img>
+        <img style={imgStyle}  src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"></img>
         <div style={profileTopDiv}></div>
         <h5 style={nameStyle}>Charley McGowan</h5>
       </div>

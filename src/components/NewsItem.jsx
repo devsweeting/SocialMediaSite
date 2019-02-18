@@ -1,9 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
+import emptyHeart from "../assets/Heart_icon_red_hollow.svg";
 
 
 
 
-function NewsItem({image}) {
+function NewsItem(props) {
+
+  let userName = '';
+  let content = '';
+
   var myStyledComponentStyles = {
     border: '1px lightgrey solid',
     display: 'flex',
@@ -29,18 +35,32 @@ function NewsItem({image}) {
 
   return (
     <div style={myStyledComponentStyles}>
+      <style jsx> {`
+          img {
+            max-width: 20px;
+          }
+    `}
+      </style>
       <div style={itemImage}>
-        <img style={imgStyle} src={image}></img>
+        <img style={imgStyle} src="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"></img>
       </div>
       <hr/>
       <div style={itemContent}>
-        <p><em>Title</em></p>
+        <p><em>User Name: {props.userName} </em></p>
           <hr/>
-          <p>ContentContentContent</p>
+          <p>{props.content}</p>
+          <p>
+            <img src={emptyHeart}></img>
+          </p>
       </div>
     </div>
 
   );
+}
+
+NewsItem.propTypes = {
+  userName: PropTypes.string,
+  content: PropTypes.string
 }
 
 export default NewsItem;

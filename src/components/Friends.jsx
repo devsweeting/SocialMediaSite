@@ -11,11 +11,11 @@ function Friends() {
   return (
     <div style={myStyledComponentStyles}>
       <h2>Friends you may know:</h2>
-        <FriendSuggestion image="http://files.softicons.com/download/business-icons/flatastic-icons-part-4-by-custom-icon-design/png/72x72/user-blue.png"/>
+        <FriendSuggestion image="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"/>
           <hr/>
-        <FriendSuggestion image="http://files.softicons.com/download/business-icons/flatastic-icons-part-4-by-custom-icon-design/png/72x72/user-blue.png"/>
+        <FriendSuggestion image="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"/>
           <hr/>
-        <FriendSuggestion image="http://files.softicons.com/download/business-icons/flatastic-icons-part-4-by-custom-icon-design/png/72x72/user-blue.png"/>
+        <FriendSuggestion image="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"/>
           <hr/>
     </div>
 
