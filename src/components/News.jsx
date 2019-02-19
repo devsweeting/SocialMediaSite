@@ -25,10 +25,11 @@ class News extends React.Component {
     }
   }
 
-
   handleAddingNewNewsItemToMasterNewsItemList(newNews){
     let newMasterNewsItemList = this.state.masterNewsItemList.slice();
     newMasterNewsItemList.push(newNews);
+    let masterNewsListLength = newMasterNewsItemList.length;
+    this.props.onAddingTotalNumberOfTweets(masterNewsListLength);
     this.setState({masterNewsItemList: newMasterNewsItemList});
   }
 
@@ -37,8 +38,7 @@ class News extends React.Component {
       <div style={this.myStyledComponentStyles}>
 
         <NewsForm
-          onAddingNewNewsItemToMasterNewsItemList={this.handleAddingNewNewsItemToMasterNewsItemList}
-          testInputThingy="testInputThingy Output"/>
+          onAddingNewNewsItemToMasterNewsItemList={this.handleAddingNewNewsItemToMasterNewsItemList}/>
 
         {this.state.masterNewsItemList.map((news) =>
           <NewsItem userName={news.userName}
@@ -48,8 +48,10 @@ class News extends React.Component {
       </div>
     );
   }
+}
 
-
+News.propTypes ={
+  totalTweets: PropTypes.number
 }
 
 export default News;

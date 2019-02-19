@@ -7,53 +7,79 @@ import Profile from "./Profile";
 
 
 
-function App(props) {
-  var myStyledComponentStyles = {
-    display: 'grid',
-    gridGap: '1em',
-    gridTemplateColumns: '1fr 1fr 1fr',
-    fontFamily: 'arial',
-  }
-  var headerStyle = {
-    gridColumn: '1 / 4',
-    gridRow: '1',
-  }
-  var profileStyle = {
-    gridColumn: '1',
-    gridRow: '2',
-  }
-  var bioStyle = {
-    gridColumn: '1',
-    gridRow: '3',
-  }
-  var newsStyle = {
-    gridColumn: '2',
-    gridRow: '2 / 4',
-  }
-  var friendsStyle = {
-    gridColumn: '3',
-    gridRow: '2 / 4',
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      numberOfTweetsForUser: 0,
+      numberOfFollowers: 0
+    };
+    this.handleAddingTotalNumberOfTweets = this.handleAddingTotalNumberOfTweets.bind(this);
+    this.handleAddingTotalFollowers = this.handleAddingTotalFollowers.bind(this);
   }
 
+  handleAddingTotalNumberOfTweets(numberOfTweets){
+    let newTweetValue = numberOfTweets;
+    this.setState({numberOfTweetsForUser: newTweetValue});
+  }
+
+  handleAddingTotalFollowers(){
+    let newFollowerTotal = this.state.numberOfFollowers + 1 ;
+    this.setState({numberOfFollowers: newFollowerTotal})
+  }
+
+render(){
   return (
-    <div style={myStyledComponentStyles}>
-      <div style={headerStyle}>
+    <div className="myStyledComponentStyles">
+      <style jsx>{`
+        .myStyledComponentStyles {
+          display: grid;
+          grid-gap: 1em;
+          gridTemplate-columns: 1fr 1fr 1fr;
+          font-family: arial;
+        }
+        .headerStyle {
+          grid-column: 1 / 4;
+          grid-row: 1;
+        }
+        .profileStyle {
+          grid-column: 1;
+          grid-row: 2;
+        }
+        .bioStyle {
+          grid-column: 1;
+          grid-row: 3;
+        }
+        .newsStyle {
+          grid-column: 2;
+          grid-row: 2 / 4;
+        }
+        .friendsStyle {
+          grid-column: 3;
+          grid-row: 2 / 4;
+        }
+          `}
+      </style>
+      <div className="headerStyle">
         <Header/>
       </div>
-      <div style={profileStyle}>
-        <Profile/>
+      <div className="profileStyle">
+        <Profile totalTweets={this.state.numberOfTweetsForUser} totalFollowers={this.state.numberOfFollowers}/>
       </div>
-      <div style={bioStyle}>
+      <div className="bioStyle">
         <Bio/>
       </div>
-      <div style={newsStyle}>
-        <News/>
+      <div className="newsStyle">
+        <News onAddingTotalNumberOfTweets={this.handleAddingTotalNumberOfTweets}/>
       </div>
-      <div style={friendsStyle}>
-        <Friends/>
+      <div className="friendsStyle">
+        <Friends onAddingTotalFollowers={this.handleAddingTotalFollowers}/>
       </div>
     </div>
   );
+
+}
 }
 
 export default App;

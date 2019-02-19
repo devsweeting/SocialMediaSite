@@ -1,25 +1,38 @@
 import React from "react";
 import FriendSuggestion from './FriendSuggestion';
+import PropTypes from "prop-types";
 
 
 
-function Friends() {
+function Friends(props) {
   var myStyledComponentStyles = {
     border: '2px lightgrey solid',
   }
 
   return (
-    <div style={myStyledComponentStyles}>
+    <div className="myStyledComponentStyles">
+      <style jsx>{`
+              .myStyledComponentStyles {
+                border: 2px lightgrey solid;
+              }
+            `}
+      </style>
       <h2>Friends you may know:</h2>
-        <FriendSuggestion image="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"/>
+        <FriendSuggestion onAddingTotalFollowers={props.onAddingTotalFollowers} />
           <hr/>
-        <FriendSuggestion image="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"/>
+        <FriendSuggestion onAddingTotalFollowers={props.onAddingTotalFollowers} />
           <hr/>
-        <FriendSuggestion image="https://cdn3.iconfinder.com/data/icons/black-easy/512/538642-user_512x512.png"/>
+        <FriendSuggestion onAddingTotalFollowers={props.onAddingTotalFollowers} />
+          <hr/>
+        <FriendSuggestion onAddingTotalFollowers={props.onAddingTotalFollowers} />
           <hr/>
     </div>
 
   );
+}
+
+Friends.propTypes ={
+  onAddingTotalFollowers: PropTypes.func
 }
 
 export default Friends;
